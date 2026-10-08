@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<title>راسل — مرجع الأيقونات</title>
+<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+:root{
+ --p:#1e5f6b;--pd:#14404a;--a:#3aab7b;
+ --bg:#f0f4f8;--w:#fff;--bd:#e2e8f0;
+ --t:#1e293b;--s:#64748b;--m:#94a3b8;
+ --grad:linear-gradient(225deg,#1a3a4a 0%,#1e5f6b 55%,#2d7d4f 100%);
+ --grad-sb:linear-gradient(0deg,#1a3a4a 0%,#1b5060 50%,#1e7060 100%);
+}
+body{font-family:'Tajawal',sans-serif;background:var(--bg);direction:rtl;height:100vh;overflow:hidden;display:flex;gap:0}
+/* ── SIDEBAR (exact copy from rasel) ── */
+.sidebar{
+ width:220px;height:100vh;background:var(--grad-sb);flex-shrink:0;
+ display:flex;flex-direction:column;overflow-y:auto;
+}
+.sidebar::-webkit-scrollbar{width:3px}
+.sidebar::-webkit-scrollbar-thumb{background:rgba(255,255,255,0.15)}
+.nav-item{
+ display:flex;align-items:center;gap:9px;padding:10px 16px;
+ cursor:pointer;font-size:13px;font-weight:600;
+ color:rgba(255,255,255,0.65);transition:all .15s;
+ border-right:3px solid transparent;
+}
+.nav-item:hover{background:rgba(255,255,255,0.07);color:#fff}
+.nav-item.active{background:rgba(255,255,255,0.1);color:#fff;border-right-color:#4ade80}
+.nav-item i{font-size:15px;flex-shrink:0;opacity:0.8}
+.nav-item.active i{opacity:1}
+.nav-chev{margin-right:auto;font-size:11px;opacity:0.4}
+.nav-badge{
+ background:rgba(239,68,68,0.85);color:#fff;
+ font-size:9px;font-weight:700;padding:1px 5px;border-radius:99px;
+ margin-right:auto;
+}
+.nav-sub{
+ display:flex;align-items:center;gap:9px;padding:7px 16px 7px 28px;
+ cursor:pointer;font-size:12px;font-weight:500;
+ color:rgba(255,255,255,0.5);transition:all .15s;
+}
+.nav-sub:hover{color:rgba(255,255,255,0.85)}
+.nav-sub i{font-size:13px;flex-shrink:0;opacity:0.7}
+.nav-div{height:1px;background:rgba(255,255,255,0.07);margin:4px 14px}
+/* ── MAIN CONTENT ── */
+.main{flex:1;height:100vh;padding:28px 32px;overflow-y:auto}
+.page-title{
+ font-size:20px;font-weight:900;margin-bottom:4px;
+ background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;
+}
+.page-sub{color:var(--s);font-size:13px;margin-bottom:28px}
+/* ── GROUP CARD ── */
+.group{
+ background:#fff;border:1px solid var(--bd);border-radius:14px;
+ overflow:hidden;margin-bottom:16px;
+ box-shadow:0 2px 10px rgba(30,95,107,0.06);
+}
+.group-hdr{
+ background:var(--grad);
+ padding:11px 18px;display:flex;align-items:center;gap:10px;
+}
+.group-hdr i{font-size:15px;color:rgba(255,255,255,0.8)}
+.group-hdr h2{font-size:13px;font-weight:800;color:#fff}
+.group-body{padding:0}
+/* ── ICON ROW ── */
+.icon-row{
+ display:flex;align-items:center;
+ padding:12px 18px;border-bottom:1px solid #f1f5f9;gap:14px;
+}
+.icon-row:last-child{border-bottom:none}
+.icon-row-label{
+ font-size:13px;font-weight:700;color:var(--t);
+ min-width:130px;flex-shrink:0;
+}
+.icons-group{display:flex;gap:8px;margin-right:auto}
+/* ── ICON OPTION ── */
+.ico-opt{
+ display:flex;flex-direction:column;align-items:center;gap:4px;
+ padding:8px 10px;border-radius:10px;cursor:pointer;
+ border:1.5px solid var(--bd);background:#f8fbfa;
+ min-width:58px;transition:all .2s;
+}
+.ico-opt:hover{border-color:var(--p);background:rgba(30,95,107,0.05)}
+.ico-opt.sel{
+ border-color:var(--p);background:rgba(30,95,107,0.08);
+ box-shadow:0 2px 8px rgba(30,95,107,0.15);
+}
+.ico-opt i{font-size:20px;color:var(--s);transition:color .2s}
+.ico-opt.sel i{color:var(--p)}
+.ico-opt span{font-size:9.5px;color:var(--m);font-weight:600;text-align:center;line-height:1.3}
+.ico-opt.sel span{color:var(--p)}
+/* ── PREVIEW SIDEBAR ── */
+.preview-label{
+ font-size:10px;font-weight:800;color:var(--m);
+ text-transform:uppercase;letter-spacing:1px;
+ padding:8px 18px 4px;background:#f8fbfa;
+ border-bottom:1px solid #f1f5f9;
+}
+.header-bar{display:flex;align-items:center;justify-content:space-between;margin-bottom:28px}
+</style>
+</head>
+<body>
+<!-- ══════════════════════
+  SIDEBAR PREVIEW
+══════════════════════ -->
+<div class="sidebar">
+<!-- البحث -->
+<div class="nav-item" id="sb-search">
+<i class="ti ti-search" id="si-search"></i>
+<span>البحث المتقدم</span>
+</div>
+<!-- لوحة المعلومات -->
+<div class="nav-item" id="sb-dashboard">
+<i class="ti ti-layout-dashboard" id="si-dashboard"></i>
+<span>لوحة المعلومات</span>
+</div>
+<!-- مركز الوثائق -->
+<div class="nav-item" id="sb-docs">
+<i class="ti ti-folders" id="si-docs"></i>
+<span>مركز الوثائق</span>
+<i class="ti ti-chevron-down nav-chev"></i>
+</div>
+<div class="nav-sub" id="sb-warid"><i class="ti ti-arrow-bar-to-down" id="si-warid"></i>الوارد</div>
+<div class="nav-sub" id="sb-sader"><i class="ti ti-send" id="si-sader"></i>الصادر</div>
+<div class="nav-sub" id="sb-dakhili"><i class="ti ti-arrows-exchange" id="si-dakhili"></i>معاملة داخلية</div>
+<div class="nav-div"></div>
+<!-- صندوق المعاملات -->
+<div class="nav-item active" id="sb-inbox">
+<i class="ti ti-inbox" id="si-inbox"></i>
+<span>صندوق المعاملات</span>
+<span class="nav-badge">35</span>
+</div>
+<div class="nav-sub" id="sb-bared"><i class="ti ti-mail-opened" id="si-bared"></i>بريد الإدارة</div>
+<div class="nav-sub" id="sb-nosxa"><i class="ti ti-files" id="si-nosxa"></i>النسخة <span class="nav-badge" style="font-size:8px">15</span></div>
+<div class="nav-sub" id="sb-baredkhas"><i class="ti ti-mail" id="si-baredkhas"></i>البريد الخاص</div>
+<div class="nav-sub" id="sb-llsader"><i class="ti ti-corner-right-up" id="si-llsader"></i>للصادر</div>
+<div class="nav-sub" id="sb-morsala"><i class="ti ti-mail-forward" id="si-morsala"></i>المعاملات المرسلة</div>
+<div class="nav-sub" id="sb-moarshafa"><i class="ti ti-archive" id="si-moarshafa"></i>المعاملات المؤرشفة</div>
+<div class="nav-sub" id="sb-mofadala"><i class="ti ti-star" id="si-mofadala"></i>المفضلة</div>
+<div class="nav-div"></div>
+<!-- الإجراءات -->
+<div class="nav-item" id="sb-ijraat">
+<i class="ti ti-checklist" id="si-ijraat"></i>
+<span>الإجراءات</span>
+</div>
+<div class="nav-sub" id="sb-bayan"><i class="ti ti-clipboard-check" id="si-bayan"></i>بيانات التسليم</div>
+<div class="nav-sub" id="sb-mutabaat"><i class="ti ti-eye" id="si-mutabaat"></i>المتابعات</div>
+<div class="nav-div"></div>
+<!-- مدخلات النظام -->
+<div class="nav-item" id="sb-madkhalat">
+<i class="ti ti-sliders" id="si-madkhalat"></i>
+<span>مدخلات النظام</span>
+</div>
+<!-- التقارير -->
+<div class="nav-item" id="sb-taqareer">
+<i class="ti ti-chart-bar" id="si-taqareer"></i>
+<span>التقارير</span>
+</div>
+<div class="nav-div"></div>
+<!-- سلة المحذوفات -->
+<div class="nav-item" id="sb-salla">
+<i class="ti ti-trash" id="si-salla"></i>
+<span>سلة المحذوفات</span>
+</div>
+<div class="nav-sub" id="sb-markaz"><i class="ti ti-folders" id="si-markaz"></i>مركز الوثائق</div>
+</div>
+<!-- ══════════════════════
+  MAIN CONTENT
+══════════════════════ -->
+<div class="main">
+<div class="header-bar">
+<div>
+<h1 class="page-title">مرجع أيقونات القائمة الجانبية</h1>
+</div>
+</div>
+<!-- ══════ الرئيسية ══════ -->
+<div class="group">
+<div class="group-hdr">
+<i class="ti ti-layout-navbar"></i>
+<h2>عناصر القائمة الرئيسية</h2>
+</div>
+<div class="group-body">
+<div class="preview-label">الأيقونة الحالية على اليسار — انقر لتغييرها</div>
+<div class="icon-row">
+<span class="icon-row-label">البحث المتقدم</span>
+<div class="icons-group">
+<div class="ico-opt sel" onclick="pick('search','ti-search',this)"><i class="ti ti-search"></i><span>search</span></div>
+<div class="ico-opt" onclick="pick('search','ti-adjustments-horizontal',this)"><i class="ti ti-adjustments-horizontal"></i><span>adjustments</span></div>
+<div class="ico-opt" onclick="pick('search','ti-zoom-in',this)"><i class="ti ti-zoom-in"></i><span>zoom-in</span></div>
+<div class="ico-opt" onclick="pick('search','ti-filter-search',this)"><i class="ti ti-filter-search"></i><span>filter-search</span></div>
+</div>
+</div>
+<div class="icon-row">
+<span class="icon-row-label">لوحة المعلومات</span>
+<div class="icons-group">
+<div class="ico-opt sel" onclick="pick('dashboard','ti-layout-dashboard',this)"><i class="ti ti-layout-dashboard"></i><span>dashboard</span></div>
+<div class="ico-opt" onclick="pick('dashboard','ti-home',this)"><i class="ti ti-home"></i><span>home</span></div>
+<div class="ico-opt" onclick="pick('dashboard','ti-chart-infographic',this)"><i class="ti ti-chart-infographic"></i><span>infographic</span></div>
+<div class="ico-opt" onclick="pick('dashboard','ti-template',this)"><i class="ti ti-template"></i><span>template</span></div>
+</div>
+</div>
+<div class="icon-row">
+<span class="icon-row-label">مركز الوثائق</span>
+<div class="icons-group">
+<div class="ico-opt sel" onclick="pick('docs','ti-folders',this)"><i class="ti ti-folders"></i><span>folders</span></div>
+<div class="ico-opt" onclick="pick('docs','ti-folder',this)"><i class="ti ti-folder"></i><span>folder</span></div>
+<div class="ico-opt" onclick="pick('docs','ti-file-stack',this)"><i class="ti ti-file-stack"></i><span>file-stack</span></div>
+<div class="ico-opt" onclick="pick('docs','ti-archive',this)"><i class="ti ti-archive"></i><span>archive</span></div>
+</div>
+</div>
+<div class="icon-row">
+<span class="icon-row-label">صندوق المعاملات</span>
+<div class="icons-group">
+<div class="ico-opt sel" onclick="pick('inbox','ti-inbox',this)"><i class="ti ti-inbox"></i><span>inbox</span></div>
+<div class="ico-opt" onclick="pick('inbox','ti-mail',this)"><i class="ti ti-mail"></i><span>mail</span></div>
+<div class="ico-opt" onclick="pick('inbox','ti-tray',this)"><i class="ti ti-tray"></i><span>tray</span></div>
+<div class="ico-opt" onclick="pick('inbox','ti-mail-box',this)"><i class="ti ti-mail-box"></i><span>mail-box</span></div>
+</div>
+</div>
+<div class="icon-row">
+<span class="icon-row-label">الإجراءات</span>
+<div class="icons-group">
+<div class="ico-opt sel" onclick="pick('ijraat','ti-checklist',this)"><i class="ti ti-checklist"></i><span>checklist</span></div>
+<div class="ico-opt" onclick="pick('ijraat','ti-list-check',this)"><i class="ti ti-list-check"></i><span>list-check</span></div>
+<div class="ico-opt" onclick="pick('ijraat','ti-circle-check',this)"><i class="ti ti-circle-check"></i><span>circle-check</span></div>
+<div class="ico-opt" onclick="pick('ijraat','ti-checks',this)"><i class="ti ti-checks"></i><span>checks</span></div>
+</div>
+</div>
+<div class="icon-row">
+<span class="icon-row-label">مدخلات النظام</span>
+<div class="icons-group">
+<div class="ico-opt sel" onclick="pick('madkhalat','ti-sliders',this)"><i class="ti ti-sliders"></i><span>sliders</span></div>
+<div class="ico-opt" onclick="pick('madkhalat','ti-settings',this)"><i class="ti ti-settings"></i><span>settings</span></div>
+<div class="ico-opt" onclick="pick('madkhalat','ti-adjustments',this)"><i class="ti ti-adjustments"></i><span>adjustments</span></div>
+<div class="ico-opt" onclick="pick('madkhalat','ti-tool',this)"><i class="ti ti-tool"></i><span>tool</span></div>
+</div>
+</div>
+<div class="icon-row">
+<span class="icon-row-label">التقارير</span>
+<div class="icons-group">
+<div class="ico-opt sel" onclick="pick('taqareer','ti-chart-bar',this)"><i class="ti ti-chart-bar"></i><span>chart-bar</span></div>
+<div class="ico-opt" onclick="pick('taqareer','ti-chart-line',this)"><i class="ti ti-chart-line"></i><span>chart-line</span></div>
+<div class="ico-opt" onclick="pick('taqareer','ti-report-analytics',this)"><i class="ti ti-report-analytics"></i><span>analytics</span></div>
+<div class="ico-opt" onclick="pick('taqareer','ti-graph',this)"><i class="ti ti-graph"></i><span>graph</span></div>
+</div>
+</div>
+<div class="icon-row">
+<span class="icon-row-label">سلة المحذوفات</span>
+<div class="icons-group">
+<div class="ico-opt sel" onclick="pick('salla','ti-trash',this)"><i class="ti ti-trash"></i><span>trash</span></div>
+<div class="ico-opt" onclick="pick('salla','ti-trash-x',this)"><i class="ti ti-trash-x"></i><span>trash-x</span></div>
+<div class="ico-opt" onclick="pick('salla','ti-circle-x',this)"><i class="ti ti-circle-x"></i><span>circle-x</span></div>
+<div class="ico-opt" onclick="pick('salla','ti-archive-off',this)"><i class="ti ti-archive-off"></i><span>archive-off</span></div>
+</div>
+</div>
+</div>
+</div>
+<!-- ══════ صندوق المعاملات الفرعية ══════ -->
+<div class="group">
+<div class="group-hdr">
+<i class="ti ti-inbox"></i>
+<h2>صندوق المعاملات — العناصر الفرعية</h2>
+</div>
+<div class="group-body">
+<div class="icon-row">
+<span class="icon-row-label">بريد الإدارة</span>
+<div class="icons-group">
+<div class="ico-opt sel" onclick="pick('bared','ti-mail-opened',this)"><i class="ti ti-mail-opened"></i><span>mail-opened</span></div>
+<div class="ico-opt" onclick="pick('bared','ti-inbox',this)"><i class="ti ti-inbox"></i><span>inbox</span></div>
+<div class="ico-opt" onclick="pick('bared','ti-send',this)"><i class="ti ti-send"></i><span>send</span></div>
+<div class="ico-opt" onclick="pick('bared','ti-message-2',this)"><i class="ti ti-message-2"></i><span>message-2</span></div>
+</div>
+</div>
+<div class="icon-row">
+<span class="icon-row-label">النسخة</span>
+<div class="icons-group">
+<div class="ico-opt sel" onclick="pick('nosxa','ti-files',this)"><i class="ti ti-files"></i><span>files</span></div>
+<div class="ico-opt" onclick="pick('nosxa','ti-copy',this)"><i class="ti ti-copy"></i><span>copy</span></div>
+<div class="ico-opt" onclick="pick('nosxa','ti-clipboard-copy',this)"><i class="ti ti-clipboard-copy"></i><span>clip-copy</span></div>
+<div class="ico-opt" onclick="pick('nosxa','ti-layers-subtract',this)"><i class="ti ti-layers-subtract"></i><span>layers</span></div>
+</div>
+</div>
+<div class="icon-row">
+<span class="icon-row-label">البريد الخاص</span>
+<div class="icons-group">
+<div class="ico-opt sel" onclick="pick('baredkhas','ti-mail',this)"><i class="ti ti-mail"></i><span>mail</span></div>
+<div class="ico-opt" onclick="pick('baredkhas','ti-lock',this)"><i class="ti ti-lock"></i><span>lock</span></div>
+<div class="ico-opt" onclick="pick('baredkhas','ti-user',this)"><i class="ti ti-user"></i><span>user</span></div>
+<div class="ico-opt" onclick="pick('baredkhas','ti-message-circle',this)"><i class="ti ti-message-circle"></i><span>message</span></div>
+</div>
+</div>
+<div class="icon-row">
+<span class="icon-row-label">للصادر</span>
+<div class="icons-group">
+<div class="ico-opt sel" onclick="pick('llsader','ti-corner-right-up',this)"><i class="ti ti-corner-right-up"></i><span>corner-up</span></div>
+<div class="ico-opt" onclick="pick('llsader','ti-arrow-bar-up',this)"><i class="ti ti-arrow-bar-up"></i><span>arrow-up</span></div>
+<div class="ico-opt" onclick="pick('llsader','ti-external-link',this)"><i class="ti ti-external-link"></i><span>external</span></div>
+<div class="ico-opt" onclick="pick('llsader','ti-upload',this)"><i class="ti ti-upload"></i><span>upload</span></div>
+</div>
+</div>
+<div class="icon-row">
+<span class="icon-row-label">المعاملات المرسلة</span>
+<div class="icons-group">
+<div class="ico-opt sel" onclick="pick('morsala','ti-mail-forward',this)"><i class="ti ti-mail-forward"></i><span>mail-fwd</span></div>
+<div class="ico-opt" onclick="pick('morsala','ti-send',this)"><i class="ti ti-send"></i><span>send</span></div>
+<div class="ico-opt" onclick="pick('morsala','ti-arrow-right',this)"><i class="ti ti-arrow-right"></i><span>arrow-right</span></div>
+<div class="ico-opt" onclick="pick('morsala','ti-circle-arrow-right',this)"><i class="ti ti-circle-arrow-right"></i><span>circ-right</span></div>
+</div>
+</div>
+<div class="icon-row">
+<span class="icon-row-label">المعاملات المؤرشفة</span>
+<div class="icons-group">
+<div class="ico-opt sel" onclick="pick('moarshafa','ti-archive',this)"><i class="ti ti-archive"></i><span>archive</span></div>
+<div class="ico-opt" onclick="pick('moarshafa','ti-box',this)"><i class="ti ti-box"></i><span>box</span></div>
+<div class="ico-opt" onclick="pick('moarshafa','ti-database',this)"><i class="ti ti-database"></i><span>database</span></div>
+<div class="ico-opt" onclick="pick('moarshafa','ti-books',this)"><i class="ti ti-books"></i><span>books</span></div>
+</div>
+</div>
+<div class="icon-row">
+<span class="icon-row-label">المفضلة</span>
+<div class="icons-group">
+<div class="ico-opt sel" onclick="pick('mofadala','ti-star',this)"><i class="ti ti-star"></i><span>star</span></div>
+<div class="ico-opt" onclick="pick('mofadala','ti-bookmark',this)"><i class="ti ti-bookmark"></i><span>bookmark</span></div>
+<div class="ico-opt" onclick="pick('mofadala','ti-heart',this)"><i class="ti ti-heart"></i><span>heart</span></div>
+<div class="ico-opt" onclick="pick('mofadala','ti-pin',this)"><i class="ti ti-pin"></i><span>pin</span></div>
+</div>
+</div>
+</div>
+</div>
+<!-- ══════ مركز الوثائق الفرعية ══════ -->
+<div class="group">
+<div class="group-hdr">
+<i class="ti ti-folders"></i>
+<h2>مركز الوثائق — العناصر الفرعية</h2>
+</div>
+<div class="group-body">
+<div class="icon-row">
+<span class="icon-row-label">الوارد</span>
+<div class="icons-group">
+<div class="ico-opt sel" onclick="pick('warid','ti-arrow-bar-to-down',this)"><i class="ti ti-arrow-bar-to-down"></i><span>arrow-down</span></div>
+<div class="ico-opt" onclick="pick('warid','ti-cloud-download',this)"><i class="ti ti-cloud-download"></i><span>download</span></div>
+<div class="ico-opt" onclick="pick('warid','ti-inbox',this)"><i class="ti ti-inbox"></i><span>inbox</span></div>
+<div class="ico-opt" onclick="pick('warid','ti-corner-left-down',this)"><i class="ti ti-corner-left-down"></i><span>corner-dn</span></div>
+</div>
+</div>
+<div class="icon-row">
+<span class="icon-row-label">الصادر</span>
+<div class="icons-group">
+<div class="ico-opt sel" onclick="pick('sader','ti-send',this)"><i class="ti ti-send"></i><span>send</span></div>
+<div class="ico-opt" onclick="pick('sader','ti-arrow-bar-up',this)"><i class="ti ti-arrow-bar-up"></i><span>arrow-up</span></div>
+<div class="ico-opt" onclick="pick('sader','ti-cloud-upload',this)"><i class="ti ti-cloud-upload"></i><span>upload</span></div>
+<div class="ico-opt" onclick="pick('sader','ti-corner-right-up',this)"><i class="ti ti-corner-right-up"></i><span>corner-up</span></div>
+</div>
+</div>
+<div class="icon-row">
+<span class="icon-row-label">معاملة داخلية</span>
+<div class="icons-group">
+<div class="ico-opt sel" onclick="pick('dakhili','ti-arrows-exchange',this)"><i class="ti ti-arrows-exchange"></i><span>exchange</span></div>
+<div class="ico-opt" onclick="pick('dakhili','ti-building',this)"><i class="ti ti-building"></i><span>building</span></div>
+<div class="ico-opt" onclick="pick('dakhili','ti-home-2',this)"><i class="ti ti-home-2"></i><span>home-2</span></div>
+<div class="ico-opt" onclick="pick('dakhili','ti-refresh',this)"><i class="ti ti-refresh"></i><span>refresh</span></div>
+</div>
+</div>
+</div>
+</div>
+<!-- ══════ الإجراءات الفرعية ══════ -->
+<div class="group">
+<div class="group-hdr">
+<i class="ti ti-checklist"></i>
+<h2>الإجراءات — العناصر الفرعية</h2>
+</div>
+<div class="group-body">
+<div class="icon-row">
+<span class="icon-row-label">بيانات التسليم</span>
+<div class="icons-group">
+<div class="ico-opt sel" onclick="pick('bayan','ti-clipboard-check',this)"><i class="ti ti-clipboard-check"></i><span>clip-check</span></div>
+<div class="ico-opt" onclick="pick('bayan','ti-clipboard-list',this)"><i class="ti ti-clipboard-list"></i><span>clip-list</span></div>
+<div class="ico-opt" onclick="pick('bayan','ti-notes',this)"><i class="ti ti-notes"></i><span>notes</span></div>
+<div class="ico-opt" onclick="pick('bayan','ti-report',this)"><i class="ti ti-report"></i><span>report</span></div>
+</div>
+</div>
+<div class="icon-row">
+<span class="icon-row-label">المتابعات</span>
+<div class="icons-group">
+<div class="ico-opt sel" onclick="pick('mutabaat','ti-eye',this)"><i class="ti ti-eye"></i><span>eye</span></div>
+<div class="ico-opt" onclick="pick('mutabaat','ti-clock-check',this)"><i class="ti ti-clock-check"></i><span>clock-check</span></div>
+<div class="ico-opt" onclick="pick('mutabaat','ti-bell-ringing',this)"><i class="ti ti-bell-ringing"></i><span>bell</span></div>
+<div class="ico-opt" onclick="pick('mutabaat','ti-radar',this)"><i class="ti ti-radar"></i><span>radar</span></div>
+</div>
+</div>
+</div>
+</div>
+<!-- ══════ مدخلات النظام الفرعية ══════ -->
+<div class="group">
+<div class="group-hdr">
+<i class="ti ti-sliders"></i>
+<h2>مدخلات النظام — العناصر الفرعية</h2>
+</div>
+<div class="group-body">
+<div class="icon-row">
+<span class="icon-row-label">نوع الوثيقة</span>
+<div class="icons-group">
+<div class="ico-opt sel" onclick="pick('nowaa','ti-file-description',this)"><i class="ti ti-file-description"></i><span>file-desc</span></div>
+<div class="ico-opt" onclick="pick('nowaa','ti-category',this)"><i class="ti ti-category"></i><span>category</span></div>
+<div class="ico-opt" onclick="pick('nowaa','ti-tag',this)"><i class="ti ti-tag"></i><span>tag</span></div>
+<div class="ico-opt" onclick="pick('nowaa','ti-file-code',this)"><i class="ti ti-file-code"></i><span>file-code</span></div>
+</div>
+</div>
+<div class="icon-row">
+<span class="icon-row-label">الجهة</span>
+<div class="icons-group">
+<div class="ico-opt sel" onclick="pick('jiha','ti-building',this)"><i class="ti ti-building"></i><span>building</span></div>
+<div class="ico-opt" onclick="pick('jiha','ti-users',this)"><i class="ti ti-users"></i><span>users</span></div>
+<div class="ico-opt" onclick="pick('jiha','ti-sitemap',this)"><i class="ti ti-sitemap"></i><span>sitemap</span></div>
+<div class="ico-opt" onclick="pick('jiha','ti-network',this)"><i class="ti ti-network"></i><span>network</span></div>
+</div>
+</div>
+<div class="icon-row">
+<span class="icon-row-label">فئة المعاملة</span>
+<div class="icons-group">
+<div class="ico-opt sel" onclick="pick('fea','ti-layout-list',this)"><i class="ti ti-layout-list"></i><span>list</span></div>
+<div class="ico-opt" onclick="pick('fea','ti-category-2',this)"><i class="ti ti-category-2"></i><span>category-2</span></div>
+<div class="ico-opt" onclick="pick('fea','ti-tag',this)"><i class="ti ti-tag"></i><span>tag</span></div>
+<div class="ico-opt" onclick="pick('fea','ti-table',this)"><i class="ti ti-table"></i><span>table</span></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script>
+const map = {
+ search:'sb-search',dashboard:'sb-dashboard',docs:'sb-docs',
+ inbox:'sb-inbox',ijraat:'sb-ijraat',madkhalat:'sb-madkhalat',
+ taqareer:'sb-taqareer',salla:'sb-salla',bared:'sb-bared',
+ nosxa:'sb-nosxa',baredkhas:'sb-baredkhas',llsader:'sb-llsader',
+ morsala:'sb-morsala',moarshafa:'sb-moarshafa',mofadala:'sb-mofadala',
+ warid:'sb-warid',sader:'sb-sader',dakhili:'sb-dakhili',
+ bayan:'sb-bayan',mutabaat:'sb-mutabaat',
+ nowaa:null,jiha:null,fea:null,markaz:'sb-markaz'
+};
+function pick(key, icon, el) {
+ const group = el.closest('.icons-group');
+ group.querySelectorAll('.ico-opt').forEach(o => o.classList.remove('sel'));
+ el.classList.add('sel');
+ const sbId = map[key];
+ if(sbId) {
+   const sbItem = document.getElementById(sbId);
+   if(sbItem) {
+     const iEl = sbItem.querySelector('i');
+     if(iEl) { iEl.className = 'ti ' + icon; }
+   }
+   const siEl = document.getElementById('si-' + key);
+   if(siEl) siEl.className = 'ti ' + icon;
+ }
+}
+</script>
+</body>
+</html>
